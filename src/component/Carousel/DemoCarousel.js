@@ -9,14 +9,27 @@ import logo3 from "./img1.png";
 import logo4 from "./img2.png";
 import logo5 from "./gg1.png";
 import logo6 from "./gg2.png"
-// import "./DemoCarousel.scss";
+ import "./DemoCarousel.scss";
+ 
 
 
 class DemoCarousel extends Component {
   render() {
     return (
-    //calling the carousel wrapper component 
-      <Carousel cellSpacing={15} slideWidth={0.25}>
+      <div>
+
+        <font size="8">Here you can view our top 6 users searches</font> 
+        <p>Click the next button to display the Carousel</p>
+       <ul>
+       <li>Akropolis in Athens</li>
+       <li>White Tower of Thessaloniki</li>
+       <li>Regency Casino of  Thessaloniki</li>
+       <li>360 Cocktail Bar Athens</li>
+       <li>Vanilla Sky World in Thessaloniki</li>
+       <li>Shark Bar Restaurant in Thessaloniki</li>
+       
+</ul> 
+      <Carousel cellSpacing={100} slideWidth={0.25}>
         {/* <div className="imgio"> */}
         <img src={logo4} style={{
           backgroundPosition: 'center',
@@ -63,6 +76,10 @@ class DemoCarousel extends Component {
         
       </Carousel>
 
+      
+       
+
+</div>
 
 
     );

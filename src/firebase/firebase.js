@@ -25,8 +25,8 @@ if (!firebase.apps.length) {
 
 
 
-let db = firebase.firestore();
-db.settings({timestampsInSnapshots:true});
+
+
 const auth = firebase.auth();
 
 export {
@@ -35,4 +35,4 @@ export {
 };
 
 
-export default db;
+export default firebase;

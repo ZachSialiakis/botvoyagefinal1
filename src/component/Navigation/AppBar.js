@@ -25,11 +25,12 @@ const MuiAppbar = (props) =>{
             
           </Typography>
           <Button component={Link} to={routes.ABOUTUS}>About Us</Button>
-          <Button component={Link} to={routes.HOME}>HOME</Button>
+         
           <Button component={Link} to={routes.ACCOUNT}>ACCOUNT</Button>
           <Button component={Link} to={routes.SEARCHPAGE}>SEARCH</Button>
-          <Button component={Link} to={routes.RECOMEND}>BOT</Button>
+          <Button component={Link} to={routes.BOT}>BOT</Button>
           <Button component={Link} to={routes.RECOMEND}>RECOMENDATIONS</Button>
+          
         
           <SignOutButton />
         </Toolbar>
