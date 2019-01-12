@@ -1,14 +1,18 @@
-html, body { height: 100% }
-      body { margin: 0 }
+
+html, body, #app, #app>div {
+  height: 100%;
+}
+//       body { margin: 0 }
 ReactWebChat {
   bottom:0;
 }
 .tablet {
   position: static;
   float: auto;
+  width:99.8%;
+
+  // height: 830px;
   
-  width: 99.5%;
-  height: 780px;
   // margin-top: 5%;
   // left: 15%;
 
@@ -16,7 +20,9 @@ ReactWebChat {
   // border-top-width: 60px;
   // border-bottom-width: 60px;
   // border-radius: 36px;
-
+  height: 870px;
+   overflow: hidden;
+   
 
 
 // &:before {/ The horizontal line on the top of the device /

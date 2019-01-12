@@ -1,7 +1,9 @@
 .recent-search{
-  width:290px;
-  background-color:#FFF;
-  box-shadow: 0 0 34px 0 rgba(255, 95, 95, 0.32);
+  width:370px;
+  background-color:white;
+  box-shadow: 0 0 101px 0 rgba(46, 46, 155, 0.32);
+  border-radius: 20px;
+  margin-top: -70px;
 
   .recent-search-header{
     position:relative;
@@ -9,6 +11,7 @@
     text-align:center;
 
     padding:27px 63px;
+    
 
     color:#4a4a4a;
 
@@ -57,7 +60,7 @@
       }
 
       .recent-search-item-link{
-        color:#9b9b9b;
+        color:#4a4a4a;
         text-decoration:none;
         font-size:14px;
         font-family: Gotham;

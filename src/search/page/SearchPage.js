@@ -102,7 +102,7 @@ class SearchPage extends Component {
 
     const params = {
       venuePhotos: "1",
-      limit: "6",
+      limit: "15",
       near: location,
       query,
       client_id: apiParams.client_id,
@@ -160,30 +160,24 @@ class SearchPage extends Component {
     return (
       <div>
         <div className="search-page">
-          {/* <ReactWebChat directLine={this.directLine} /> */}
           <div className="search-page-form-container">
             <SearchForm onSubmit={this.handleFormSubmit}
               query={query}
               location={location} />
           </div>
           <div className="search-page-lists">
-            {/* <div className="tablet">
-              <div className="content">
-                <iframe src="https://webchat.botframework.com/embed/BotVoyage?s=fJ3Mh68Hmdg.cwA.Fqo.byROQrXgUJFhJMn88M2xy2vmx2uwqAQw8FKPA-pFDaY"></iframe>
-              </div>
-            </div> */}
-            <div className="search-page-venue-card-list">
+          <div className="search-page-venue-card-list">
               {
                 this.state.venues && <VenueCardList venue={this.state.venues} photoList={this.state.photos} />
               }
-            </div> 
-             <div className="search-page-recent-search-list">
+            </div>
+            <div className="search-page-recent-search-list">
               <RecentSearchList recentSearch={this.state.recentSearch}
                 onClick={this.handleFormSubmit} />
-            </div> 
+            </div>
           </div>
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   }

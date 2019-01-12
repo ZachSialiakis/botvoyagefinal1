@@ -79,7 +79,7 @@ class AccountPage extends React.Component {
 
 //Material UI STyling and button on click events
       <div className="user-card">
-        <Card style={{maxWidth: 600, marginTop: 100}}>
+        <Card style={{width: '100%', marginTop: 200}}>
           <CardHeader
             avatar={
               <Avatar aria-label="user_pic" src={authUser.photoURL} style={{backgroundColor: 'white', width: 60, height: 60}}>

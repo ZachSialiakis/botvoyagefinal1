@@ -9,33 +9,37 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import logo from './mylogo.png';
 
 
-const MuiAppbarNonAuth = (props) =>{
+
+const MuiAppbarNonAuth = (props) => {
   const { pathname } = props.location;
 
-    return (
-      <div className={{flexGrow: 1}}>
-        <AppBar position="static" color="inherit" className="appbar">
-          <Toolbar>
-            <IconButton style={{marginLeft: -12, marginRight: 20}} color="inherit" aria-label="Menu">
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="title" color="inherit" style={{flex: 1}}>
-              
-            </Typography>
-            <Button component={Link} to={routes.ABOUTUS}>About Us</Button>
-            <Button component={Link} to={routes.SIGN_IN}>SIGN IN</Button>
-            <Button component={Link} to={routes.SIGN_UP}>SIGN UP</Button>
-            <Button component={Link} to={routes.FACEBOOKLOGIN}>SOCIAL LOGIN</Button>
-            <Button component={Link} to={routes.SEARCHPAGE}>SEARCH</Button>
-            
-           
-            
-          </Toolbar>
-        </AppBar>
+  return (
+    <div className={{ flexGrow: 1 }}>
+      <AppBar position="static" color="inherit" className="appbar" style={{ backgroundColor: '#2196F3' }}>
+        <Toolbar>
+          <h2 style={{ paddingLeft: "100px", textAlign: "center", color: "yellow", fontSize: "30px", fontFamily: "'Norican', cursive" }}>BotVoyage</h2>
 
-      </div>
+          {/* <IconButton style={{marginLeft: -12, marginRight: 20}} color="inherit" aria-label="Menu">
+              
+            </IconButton> */}
+          <Typography variant="title" color="inherit" style={{ flex: 1 }}>
+
+          </Typography>
+          <Button component={Link} to={routes.ABOUTUS}>About Us</Button>
+          <Button component={Link} to={routes.SIGN_IN}>SIGN IN</Button>
+          <Button component={Link} to={routes.SIGN_UP}>SIGN UP</Button>
+          <Button component={Link} to={routes.FACEBOOKLOGIN}>GOOGLE LOGIN</Button>
+          <Button component={Link} to={routes.SEARCHPAGE}>SEARCH</Button>
+
+
+
+        </Toolbar>
+      </AppBar>
+
+    </div>
 
   );
 }

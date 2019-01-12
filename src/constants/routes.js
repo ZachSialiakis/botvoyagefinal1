@@ -8,5 +8,6 @@ export const FACEBOOKLOGIN = "/facebooklogin";
 export const USERDASHBOARD = "/userdashboard";
 export const RECOMEND = "/recomendations";
 export const BOT = "/bot";
+export const HOME = "/details";
 
 

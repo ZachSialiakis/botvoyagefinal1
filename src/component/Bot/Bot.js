@@ -19,7 +19,7 @@ class Bot extends React.Component {
 
       <div className="tablet">
         <div className="content">
-          <iframe src="https://webchat.botframework.com/embed/BotVoyage?s=fJ3Mh68Hmdg.cwA.Fqo.byROQrXgUJFhJMn88M2xy2vmx2uwqAQw8FKPA-pFDaY"></iframe>
+          <iframe src="https://webchat.botframework.com/embed/BotVoyage?s=fJ3Mh68Hmdg.cwA.Fqo.byROQrXgUJFhJMn88M2xy2vmx2uwqAQw8FKPA-pFDaY" resize="detect"></iframe>
         </div>
       </div>
     );

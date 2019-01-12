@@ -1,90 +1,45 @@
-import React, { Component } from 'react';
-import Carousel from 'nuka-carousel';
+import React from 'react';
+import AliceCarousel from 'react-alice-carousel';
+import "react-alice-carousel/src/alice-carousel.scss";
 
-
-//import logo of venues
+// //import logo of venues
 import logo1 from "./gg.png";
 import logo2 from "./img3.png";
 import logo3 from "./img1.png";
 import logo4 from "./img2.png";
 import logo5 from "./gg1.png";
 import logo6 from "./gg2.png"
- import "./DemoCarousel.scss";
- 
 
+const DemoCarousel = () => {
+  const handleOnDragStart = e => e.preventDefault()
+  return (
+    <div>
+      <div style={{textAlign: 'center'}}>
 
-class DemoCarousel extends Component {
-  render() {
-    return (
-      <div>
-
-        <font size="8">Here you can view our top 6 users searches</font> 
-        <p>Click the next button to display the Carousel</p>
-       <ul>
-       <li>Akropolis in Athens</li>
-       <li>White Tower of Thessaloniki</li>
-       <li>Regency Casino of  Thessaloniki</li>
-       <li>360 Cocktail Bar Athens</li>
-       <li>Vanilla Sky World in Thessaloniki</li>
-       <li>Shark Bar Restaurant in Thessaloniki</li>
-       
-</ul> 
-      <Carousel cellSpacing={100} slideWidth={0.25}>
-        {/* <div className="imgio"> */}
-        <img src={logo4} style={{
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          width:'100%',
-          height:'100%'
-        }} />
-        <img src={logo2} style={{
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          width:'100%',
-          height:'100%'
-        }} />
-        <img src={logo1} style={{
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          width:'100%',
-          height:'100%'
-        }} />
-       <img src={logo3} style={{
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          width:'100%',
-          height:'100%'
-        }} />
-        <img src={logo5} style={{
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          width:'100%',
-          height:'100%'
-        }} />
-        <img src={logo6} style={{
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          width:'100%',
-          height:'100%'
-        }} />
+      <h1 style={{color: 'yellow'}}>Here you can view our top 6 users searches from Greece</h1>
         
-      </Carousel>
-
-      
-       
-
-</div>
-
-
-    );
-    
-    
-  }
+          <p style={{color: 'white', fontSize: 20}}><i>Akropolis, Athens</i></p>
+          <p style={{color: 'white', fontSize: 20}}><i>White Tower, Thessaloniki</i></p>
+          <p style={{color: 'white', fontSize: 20}}><i>Regency Casino, Thessaloniki</i></p>
+          <p style={{color: 'white', fontSize: 20}}><i>360 Cocktail Bar, Athens</i></p>
+          <p style={{color: 'white', fontSize: 20}}><i>Vanilla Sky World, Thessaloniki</i></p>
+          <p style={{color: 'white', fontSize: 20}}><i>Shark Bar Restaurant, Thessaloniki</i></p>
+        
+      </div>
+      <AliceCarousel mouseDragEnabled
+        autoPlayInterval={2500}
+        autoPlay={true}
+        fadeOutAnimation={true}>
+        
+        <img src={logo1} onDragStart={handleOnDragStart} className="yours-custom-class" />
+        <img src={logo2} onDragStart={handleOnDragStart} className="yours-custom-class" />
+        <img src={logo3} onDragStart={handleOnDragStart} className="yours-custom-class" />
+        <img src={logo4} onDragStart={handleOnDragStart} className="yours-custom-class" />
+        <img src={logo5} onDragStart={handleOnDragStart} className="yours-custom-class" />
+        <img src={logo6} onDragStart={handleOnDragStart} className="yours-custom-class" />
+        
+      </AliceCarousel>
+    </div>
+  )
 }
 export default DemoCarousel;

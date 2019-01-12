@@ -18,7 +18,7 @@ class VenueTipList extends Component {
         {
           tipList && (
             <div>
-              <h1 className="venue-tip-list-name">{"TIPS"}</h1>
+              <h1 className="venue-tip-list-name">{"User Comments"}</h1>
               <ul className="venue-tips">
                 {
                   tipList.map((tip, index) => {

@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import VenueCard from "./VenueCard";
@@ -18,7 +18,7 @@ class VenueCardList extends Component {
       id: venue.id
     });
   };
-  
+
   getVenuePhotos = (id) => {
     const url = `https://api.foursquare.com/v2/venues/${id}/photos`;
     const params = {
@@ -42,22 +42,22 @@ class VenueCardList extends Component {
   };
 
   render() {
-    const {venue, photoList} = this.props;
+    const { venue, photoList } = this.props;
 
     return (
-      
+
       <div className="venues">
         {
-            venue.length > 0 ? (<ul className="venue-card-list">
-              {venue.map((venueValue, index) => (
-                <li key={venue[index].referralId}
-                    className="venue-card-list-item" >
-                  <VenueCard venues={venue[index]}
-                             onClick={this.handleSelectVenue}/>
-                </li>
-                  ))
-                }
-            </ul>) : <h1 className="venue-card-list-error-msg"> {"No Results"} </h1>
+          venue.length > 0 ? (<ul className="venue-card-list">
+            {venue.map((venueValue, index) => (
+              <li key={venue[index].referralId}
+                className="venue-card-list-item" >
+                <VenueCard venues={venue[index]}
+                  onClick={this.handleSelectVenue} />
+              </li>
+            ))
+            }
+          </ul>) : <h1 className="venue-card-list-error-msg"> {"No Results"} </h1>
         }
       </div>
     );

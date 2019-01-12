@@ -7,7 +7,7 @@ import {
   Switch,
 } from 'react-router-dom';
 
-
+  
 //import all the react components we cant to reffer to routes
 
 import VenueDetailPage from "../../detail/page/VenueDetailPage";
@@ -33,6 +33,7 @@ import withAuthorization from '../Session/withAuthorization';
 import { Container } from 'semantic-ui-react';
 import DemoCarousel from '../Carousel/DemoCarousel';
 import Bot from '../Bot/Bot';
+import HomePage from '../Home/HomePage';
 
 
 
@@ -48,7 +49,8 @@ const UserDashboard = () =>
          
 
       
-       
+      <div>
+      <Switch>
           
         
           <Route exact={true} path={routes.SEARCHPAGE} component={SearchPage}/>
@@ -60,40 +62,29 @@ const UserDashboard = () =>
           
           
           <Route  exact path={routes.ABOUTUS} component={AboutUs} />
-          <Route  path={routes.SIGN_UP} component={SignUpPage} />
-          <Route  path={routes.SIGN_IN} component={SignInPage} />
-          <Route  path={routes.PASSWORD_FORGET} component={PasswordForgotPage} />
-          <Route  path={routes.FACEBOOKLOGIN} component={LoginWithFacebookPage} />
+          <Route  exact path={routes.SIGN_UP} component={SignUpPage} />
+          <Route  exact path={routes.SIGN_IN} component={SignInPage} />
+          <Route  exact path={routes.PASSWORD_FORGET} component={PasswordForgotPage} />
+          <Route  exact path={routes.FACEBOOKLOGIN} component={LoginWithFacebookPage} />
           
+          <Route exact path={routes.HOME} component={HomePage} />
+          <Route exact path={routes.ACCOUNT} component={AccountPage} />
           
-          <Route path={routes.ACCOUNT} component={AccountPage} />
-          
-          <Route path={routes.RECOMEND} component={DemoCarousel} />
-          <Route path={routes.BOT} component={Bot} />
+          <Route exact path={routes.RECOMEND} component={DemoCarousel} />
+          <Route exact path={routes.BOT} component={Bot} />
 
           
-          
-          
-          
-          
-
-          
-          
-
-        
-          
-         
-      
           
         
         <Route component={() => <NoMatch />} />
         
+        </Switch>
      
         
-
+          </div>
 
     </div>
   </Router >
   
-//Functional component withAuthentication which authenticates users in firebase
+
 export default withAuthentication(UserDashboard);

@@ -136,7 +136,6 @@ class VenueDetailPage extends Component {
               )
           }
         </div>
-        <Footer/>
       </div>
     );
   }

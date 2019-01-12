@@ -69,13 +69,13 @@
   justify-content: center;
 }
 .search-page-recent-search-list{
-  margin: 10px;
+  // margin: 10px;
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 0;
   align-items: flex-start;
   display: flex;
-  padding: 40px 20px;
+  // padding: 40px 20px;
 }
 @media screen and (min-width: 1024px) {
   .search-page-lists{

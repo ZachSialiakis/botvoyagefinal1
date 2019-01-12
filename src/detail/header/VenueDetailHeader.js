@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import "./venue-detail-header.scss";
 
@@ -21,7 +21,7 @@ class VenueDetailHeader extends Component {
     const imgSrc = `${SourceValue.prefix}${SourceValue.width}x${SourceValue.height}${SourceValue.suffix}`;
 
     return (
-        imgSrc
+      imgSrc
     );
   };
 
@@ -34,17 +34,17 @@ class VenueDetailHeader extends Component {
       priceBars.push(<span key={data} className={data}></span>);
     }
     return (
-        priceBars
+      priceBars
     );
   };
 
   render() {
-    const {details} = this.props;
+    const { details } = this.props;
 
     return (
       <div className="detail-header">
         {
-            details && (
+          details && (
             <div>
               {/* <img className="detail-header-logo-image" src={logo} alt="Logo"/> */}
               {/* <img className="detail-header-category-image" src={category} alt="Category"/> */}
@@ -57,18 +57,29 @@ class VenueDetailHeader extends Component {
                 {details.name}
               </h1>
               <div className="detail-header-venue-details">
+                {/* <div className="detail-header-venue-address">
+                  <span className="detail-header-venue-rating-text">
+                    {details.rating}
+                  </span>
+                </div> */}
+                <div className="detail-header-venue-address">
+                  <p>Average User Rating: {details.rating}</p>
+                  {/* <span className="detail-header-venue-adress-text">
+                    {details.rating}
+                  </span> */}
+                </div>
                 <div className="detail-header-venue-address">
                   <img className="detail-header-venue-address-logo"
-                       src={locationIcon}
-                    alt="Location"/>
+                    src={locationIcon}
+                    alt="Location" />
                   <span className="detail-header-venue-address-text">
                     {details.location.address}
                   </span>
                 </div>
                 <div className="detail-header-venue-phone">
                   <img className="detail-header-venue-phone-logo"
-                       src={phoneIcon}
-                    alt="Phone"/>
+                    src={phoneIcon}
+                    alt="Phone" />
                   <span className="detail-header-venue-phone-text">
                     {details.contact.phone}
                   </span>
@@ -89,14 +100,10 @@ class VenueDetailHeader extends Component {
                     { details.price.tier === undefined ? this.renderPriceBars(0) : this.renderPriceBar(`${details.price.tier}`)}
                   </div>
                 </div> */}
-                <div className="detail-header-venue-rating">
-                  <span className="detail-header-venue-rating-text">
-                    {details.rating}
-                  </span>
-                </div>
+
               </div>
             </div>
-            )
+          )
         }
       </div>
     );

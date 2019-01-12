@@ -24,7 +24,7 @@ class RecentSearchList extends Component {
 
     return (
       <div className="recent-search">
-        <h3 className="recent-search-header">{"RECENT SEARCH"}</h3>
+        <h3 className="recent-search-header">{"YOUR SEARCH HISTORY"}</h3>
         <ul className="recent-search-items">
           {recentSearch.map((recentSearchValue, index) => (
             <li key={recentSearch[index] + index.toString()}
