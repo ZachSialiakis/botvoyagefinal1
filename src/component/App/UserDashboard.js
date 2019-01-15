@@ -7,7 +7,7 @@ import {
   Switch,
 } from 'react-router-dom';
 
-  
+
 //import all the react components we cant to reffer to routes
 
 import VenueDetailPage from "../../detail/page/VenueDetailPage";
@@ -20,7 +20,7 @@ import PasswordForgotPage from '../PasswordForgot';
 
 import AccountPage from '../Account';
 import NoMatch from '../../constants/NoMatch'
-import { withAuthentication }  from '../Session';
+import { withAuthentication } from '../Session';
 import LoginWithFacebookPage from '../LoginWithFacebookForm';
 import * as routes from '../../constants/routes';
 
@@ -37,54 +37,55 @@ import HomePage from '../Home/HomePage';
 
 
 
-
 //Component Method wrapped with Navigation Component using routes 
 const UserDashboard = () =>
 
   <Router>
-    
+
     <div >
-      
-    < Navigation />
-         
+    
 
-      
+      < Navigation />
+
+
+
+
       <div>
-      <Switch>
-          
-        
-          <Route exact={true} path={routes.SEARCHPAGE} component={SearchPage}/>
-          <Route exact path="/query=:query?&location=:location?" component={SearchPage}/>
-          <Route exact path="/detail&id=:id" component={VenueDetailPage}/>
+        <Switch>
 
 
-          
-          
-          
-          <Route  exact path={routes.ABOUTUS} component={AboutUs} />
-          <Route  exact path={routes.SIGN_UP} component={SignUpPage} />
-          <Route  exact path={routes.SIGN_IN} component={SignInPage} />
-          <Route  exact path={routes.PASSWORD_FORGET} component={PasswordForgotPage} />
-          <Route  exact path={routes.FACEBOOKLOGIN} component={LoginWithFacebookPage} />
-          
+          <Route exact={true} path={routes.SEARCHPAGE} component={SearchPage} />
+          <Route exact path="/query=:query?&location=:location?" component={SearchPage} />
+          <Route exact path="/detail&id=:id" component={VenueDetailPage} />
+
+
+
+
+
+          <Route exact path={routes.ABOUTUS} component={AboutUs} />
+          <Route exact path={routes.SIGN_UP} component={SignUpPage} />
+          <Route exact path={routes.SIGN_IN} component={SignInPage} />
+          <Route exact path={routes.PASSWORD_FORGET} component={PasswordForgotPage} />
+          <Route exact path={routes.FACEBOOKLOGIN} component={LoginWithFacebookPage} />
+
           <Route exact path={routes.HOME} component={HomePage} />
           <Route exact path={routes.ACCOUNT} component={AccountPage} />
-          
+
           <Route exact path={routes.RECOMEND} component={DemoCarousel} />
           <Route exact path={routes.BOT} component={Bot} />
 
-          
-          
-        
-        <Route component={() => <NoMatch />} />
-        
+
+
+
+          <Route component={() => <NoMatch />} />
+
         </Switch>
-     
-        
-          </div>
+
+
+      </div>
 
     </div>
   </Router >
-  
+
 
 export default withAuthentication(UserDashboard);

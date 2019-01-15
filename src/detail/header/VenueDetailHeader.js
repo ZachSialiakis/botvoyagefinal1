@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import "./venue-detail-header.scss";
 
 import logo from "../../../img/ic-02.png";
-import category from "../../../img/category.png";
+// import category from "../../../img/category.png";
 import locationIcon from "../../../img/combined-shape.png";
 import phoneIcon from "../../../img/shape.png";
 import hereNowIcon from "../../../img/ic-01.png";

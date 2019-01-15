@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>BotVoyagePlatform</title>
+  <title>BotVoyage</title>
+  <script>
+    function run(interval, frames) {
+      var int = 1;
+
+      function func() {
+        document.body.id = "b" + int;
+        int++;
+        if (int === frames) { int = 1; }
+      }
+
+      var swap = window.setInterval(func, interval);
+    }
+
+    run(10000, 4); //milliseconds, frames
+  </script>
 </head>
+
 <body>
-  <div id="root"></div>
+    <div id="root"></div>
 </body>
+
 </html>

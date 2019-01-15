@@ -2,6 +2,11 @@
 body,html{
   
   // padding:0;
+ 
+  margin:0;
+  
+  height: 100%;
+
   margin:0;
   background-repeat: no-repeat;
   background: url("../img/airport.jpeg") no-repeat center center fixed; 
@@ -10,6 +15,8 @@ body,html{
   -o-background-size: cover;
   background-size: cover;
   height: 100%;
+  
+
 }
 @font-face {
   font-family: 'Gotham';
@@ -23,3 +30,67 @@ body,html{
   font-weight: normal;
   font-style: normal;
 }
+
+#b1{background-repeat: no-repeat;
+  background: url("../img/affair.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
+  // opacity: 1.0;
+  // -webkit-transition: background 1.5s fixed;
+  // -moz-transition: background 1.5s linear;
+  // -o-transition: background 1.5s linear;
+  // -ms-transition: background 1.5s linear;
+  // transition: background 1.5s linear;
+}
+
+#b3{
+  
+  // padding:0;
+ 
+  margin:0;
+  background-repeat: no-repeat;
+  background: url("../img/kokkari.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+
+  
+
+// opacity: 1.0;
+// -webkit-transition: background 1.5s fixed;
+// -moz-transition: background 1.5s ease-out;
+// -o-transition: background 1.5s linear;
+// -ms-transition: background 1.5s linear;
+// transition: background 1.5s linear;
+}
+#b2 {
+  
+  // padding:0;
+ 
+  margin:0;
+  background-repeat: no-repeat;
+  background: url("../img/bus.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+
+  
+
+// opacity: 1.0;
+// -webkit-transition: background 1.5s fixed;
+// -moz-transition: background 1.5s linear;
+// -o-transition: background 1.5s linear;
+// -ms-transition: background 1.5s linear;
+// transition: background 1.5s linear;
+}
+
+
+

@@ -2,7 +2,7 @@ import React, {Component} from "react";
 
 import "./SearchForm.scss";
 
-import logo from "../../../img/logo-2@2x.png";
+// import logo from "../../../img/logo-2@2x.png";
 
 class SearchForm extends Component {
   constructor(props) {
